@@ -26,7 +26,6 @@ Partners can extend their integrations with the following features :
 * Receiving and responding to feedback*
 
 # __Quick Start Guide__
- 
 Get started quickly and simply. Use Taxi Dispatch API to get access to your bookings and begin connecting your dispatch or information systems : 
  
 1. Request an API key for the Sandbox
@@ -306,6 +305,11 @@ Diagram of expected flow :
 
 Request payload for the /rates endpoint can be in our [API spec][7]. 
 
+
+
+
+
+
 [1]: https://www.getpostman.com/collections/329c525522555a7a74cd
 [2]: #booking_response 
 [3]: #working_with_webhooks
@@ -313,5 +317,5 @@ Request payload for the /rates endpoint can be in our [API spec][7].
 [5]: https://taxidispatchapi.docs.apiary.io/#reference/0/v1bookingsreferencelegidresponses/provide-an-accept-or-reject-response-for-a-booking-in-its-current-state
 [6]: https://taxidispatchapi.docs.apiary.io/#reference/0/v1bookingsreferencelegiddriver/assign-a-driver-to-a-single-taxi-booking
 [7]: https://taxidispatchapi.docs.apiary.io/#reference/0/rates/search-different-transport-categories
-
+[8]: #quick_start_guide
 
