@@ -123,18 +123,11 @@ You are able to get a list of all your future bookings using the /bookings endpo
  
 When polling we recommend that you poll at an interval no shorter than __5 minutes__. Rate-limit measures will be put in place for any partner persistently using shorter intervals. If you need to ensure you know about bookings in real-time (i.e. on-demand bookings) then using Webhooks is more appropriate. 
  
-When checking using Polling, please be aware that the AUTH key has a lifetime of 1 hour.
-
-Working with Webhooks
-You can subscribe to webhooks and get notifications when booking events happen - requests for quotes (RFQ), new bookings, updates and cancellations. When these happen we send notifications to the endpoint you give us. 
- 
-Booking notifications are described in the /v2/bookings endpoint description.
- 
-Pricing requests are described in the /rates endpoint description. 
- 
-You can subscribe to webhooks from within the Partner Portal administration page. 
+When checking using Polling, please be aware that the AUTH key has a lifetime of 1 hour. 
  
 # __Working with Webhook Notifications__
+
+You can subscribe to webhooks from within the Partner Portal administration page.
 
 ## __Booking Notifications__
 /v2/bookings describe webhook notifications, an alternative to polling the /bookings endpoints and can be used to trigger an action within your app or platform. Using webhooks will mean you get these notifications in real-time and have to make fewer API calls to us.
@@ -143,12 +136,10 @@ The /bookings endpoint is the source of truth and should be used to understand t
 
 ### __Important Note on Booking Notifications__ 
 We issue webhooks as notifications and therefore we do not require your immediate action so we are not awaiting your response. <span style="color: red">If your endpoints are down, we will not currently attempt a re-try. You may get multiple notifications for the same change. You may not get the notification.</span> All these things can happen and you should handle these situations correctly. 
-
  
 
-
 # __Booking Administration__
- We expect all booking administration to be done using the /v1/bookings endpoints. 
+ Everything you need to manage bookings is available via /v1/bookings 
  
 * New Bookings
 * Updated Bookings
@@ -156,7 +147,6 @@ We issue webhooks as notifications and therefore we do not require your immediat
  
 All of the above actions require a response. To process the above, please see : [Sending a Booking Response][2]
 
-<a name="new_bookings"></a>
 ## __New Bookings__
 The customer has committed to purchasing the ride with you. Once this has been processed by our fraud teams we make this booking available to you on the terms of your commercial contract.  
 
@@ -171,7 +161,6 @@ We expect all notifications and booking updates to be processed in a timely mann
  
 Please see : [Sending a Booking Response][2], [Booking Status Changes][4]
 
-<a name="updated_bookings"></a>
 ## __Updated Bookings__
 
 If a booking is made, but subsequently changes (i.e. a flight number is provided by the customer) then we expect to see a confirmation from partners that this change has been processed. 
@@ -186,7 +175,6 @@ __We expect all notifications and booking updates to be processed in a timely ma
  
 Please see : [Sending a Booking Response][2], [Booking Status Changes][4] 
 
-<a name="cancelled_bookings"></a>
 ## __Cancelled Bookings__
 If a booking is made and is subsequently cancelled by the customer we expect to see a confirmation from partners that this change has been seen and processed. Cancelled rides cannot be "rejected", the ride has been cancelled.  
 
@@ -200,7 +188,6 @@ Please see : [Sending a Booking Response][2], [Booking Status Changes][4]
 
 
 
-<a name="booking_response"></a>
 ## __Sending a Booking Response__  
 Once a customer makes a booking, amendment or cancellation we expect confirmation from our partners that this has been seen/acknowledged. 
 
@@ -225,11 +212,8 @@ Booking acknowledgements are made using : /bookings/{reference}/{legid}/response
 NOTE : For a full understanding of what a Response will do to booking status, please see [Booking Status Changes][4].  
 Full documentation for accepting changes can be found [here][3].  
 
-<a name="driver_assign"></a>
-
 ## __Assignment of Driver__
-
-The driver assignment will take driver details (first_name, last_name, telephone_number) and associate these against the booking, to enable best tracking during the pickup experience. Customer contact details are available in the /booking responses. 
+The driver assignment will take driver details (first_name, last_name, telephone_number) and associate these against the booking. Customer contact details are available in the /booking responses. 
 
 Drivers need not be registered beforehand and can be assigned freely if you are using your own driver app. If you intend to use the Booking.com Driver app, you should include the driverID property. Registering a driver on the /v1/drivers endpoints will send an activation link to the phone and enroll driver app use. See Driver Management. 
 
