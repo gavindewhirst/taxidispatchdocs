@@ -1,10 +1,10 @@
 # __Taxi Dispatch API Guidebook__
  
-Dive right into it with the [Quickstart Guide][8], it has everything you’ll need to get cracking including information on access to our test environments and Postman scripts to get you up and running straight away. We built our Dispatch API because partners told us they wanted to connect their dispatch and data systems to us directly to manage the bookings, as well as having access to the Partner Portal and the tools available there. 
+Dive right into it with the [Quickstart Guide][8], it has everything you’ll need to get cracking including information on access to our test environments and Postman scripts to get you up and running straight away. We built our Dispatch API because Partners told us they wanted to connect their dispatch and data systems to us directly to manage the bookings, as well as having access to the Partner Portal and the tools available there. 
  
 A number of widely used dispatching systems are already connected to Booking.com. Check [to see if your dispatching partner is already part of our [Connectivity program][8]. 
  
-To deliver a great experience to our customers we expect the following be completed in all integrations : 
+To deliver a great experience to our customers we expect the following be completed by all Partners : 
  
 * Booking Administration - acknowledging new, updated and cancelled bookings. For reference see :  
     * [New Booking is Available][1]
